@@ -2,7 +2,11 @@
 
 A [Docker](http://docker.com) file to build images for AMD & ARM devices with a installation of [Samba](https://www.samba.org/) that is the standard Windows interoperability suite of programs for Linux and Unix. This is my personal Multi-architecture docker recipe.
 
-> Be aware! You should read carefully the usage documentation of every tool!
+
+This is a modified distribution:
+1. Support ARM
+2. Automatically enabled the force user=root and force group=root
+
 
 ## Thanks to
 
