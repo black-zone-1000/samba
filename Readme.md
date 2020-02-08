@@ -16,14 +16,14 @@ A [Docker](http://docker.com) file to build images for AMD & ARM devices with a 
 
 | Docker Hub | Docker Pulls | Docker Stars | Size/Layers |
 | --- | --- | --- | --- |
-| [samba](https://hub.docker.com/r/elswork/samba "elswork/samba on Docker Hub") | [![](https://img.shields.io/docker/pulls/elswork/samba.svg)](https://hub.docker.com/r/elswork/samba "elswork/samba on Docker Hub") | [![](https://img.shields.io/docker/stars/elswork/samba.svg)](https://hub.docker.com/r/elswork/samba "elswork/samba on Docker Hub") | [![](https://images.microbadger.com/badges/image/elswork/samba.svg)](https://microbadger.com/images/elswork/samba "elswork/samba on microbadger.com") |
+| [samba](https://hub.docker.com/r/rdxmaster/samba "rdxmaster/samba on Docker Hub") | [![](https://img.shields.io/docker/pulls/rdxmaster/samba.svg)](https://hub.docker.com/r/rdxmaster/samba "rdxmaster/samba on Docker Hub") | [![](https://img.shields.io/docker/stars/rdxmaster/samba.svg)](https://hub.docker.com/r/rdxmaster/samba "rdxmaster/samba on Docker Hub") | [![](https://images.microbadger.com/badges/image/rdxmaster/samba.svg)](https://microbadger.com/images/rdxmaster/samba "rdxmaster/samba on microbadger.com") |
 
 ## Build Instructions
 
 Build for amd64, armv7l, aarch64 architecture (thanks to its [Multi-Arch](https://blog.docker.com/2017/11/multi-arch-all-the-things/) base image)
 
 ``` sh
-docker build -t elswork/samba .
+docker build -t rdxmaster/samba .
 ```
 
 ## Usage
@@ -36,6 +36,6 @@ Start a samba fileshare.
 
 
 ``` sh
-docker run -d -p 137:137/udp -p 138:138/udp -p 139:139 -p 445:445 -p 445:445/udp --hostname 'filer' -v /mnt/store/smb:/share/folder  elswork/samba -u "your_username:your_password" -s "FileShare:/share/folder:rw:your_username"
+docker run -d -p 137:137/udp -p 138:138/udp -p 139:139 -p 445:445 -p 445:445/udp --hostname 'filer' -v /mnt/store/smb:/share/folder  rdxmaster/samba -u "your_username:your_password" -s "FileShare:/share/folder:rw:your_username"
 ``` 
 On Windows point your filebrowser to `\\host-ip\FileShare` to preview site.
