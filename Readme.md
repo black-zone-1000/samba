@@ -8,11 +8,11 @@ A [Docker](http://docker.com) file to build images for AMD & ARM devices with a 
 
 - [Samba](https://www.samba.org/)
 - [dastrasmue rpi-samba](https://github.com/dastrasmue/rpi-samba)
+- elswork (https://hub.docker.com/r/elswork/samba / https://www.github.com/DeftWork/samba )
 
 ## Details
 
-- [GitHub](https://github.com/DeftWork/samba)
-- [Deft.Work my personal blog](http://deft.work/Samba)
+- [GitHub](https://github.com/black-zone-1000/samba)
 
 | Docker Hub | Docker Pulls | Docker Stars | Size/Layers |
 | --- | --- | --- | --- |
