@@ -11,6 +11,15 @@ if [ $initialized = "0" ]; then
 
   cat >"$CONFIG_FILE" <<EOT
 [global]
+ntlm auth = yes
+server role = standalone server
+obey pam restrictions = yes
+unix password sync = yes
+passwd program = /usr/bin/passwd %u
+passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .
+pam password change = yes
+map to guest = bad user
+usershare allow guests = yes
 workgroup = WORKGROUP
 netbios name = $hostname
 server string = $hostname
