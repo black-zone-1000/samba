@@ -5,7 +5,7 @@ A [Docker](http://docker.com) file to build images for AMD & ARM devices with a 
 
 This is a modified distribution:
 1. Support ARM
-2. Automatically enabled the force user=root and force group=root
+2. Supports force user and force group by parameters
 
 
 ## Thanks to
@@ -43,3 +43,5 @@ Start a samba fileshare.
 docker run -d -p 137:137/udp -p 138:138/udp -p 139:139 -p 445:445 -p 445:445/udp --hostname 'filer' -v /mnt/store/smb:/share/folder  rdxmaster/samba -u "your_username:your_password" -s "FileShare:/share/folder:rw:your_username"
 ``` 
 On Windows point your filebrowser to `\\host-ip\FileShare` to preview site.
+
+You can add -e FORCE_USER [user] -e FORCE_GROUP [group] to activate the force user and group

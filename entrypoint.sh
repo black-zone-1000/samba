@@ -19,8 +19,6 @@ create mask = 0664
 directory mask = 0775
 force create mode = 0664
 force directory mode = 0775
-force user = root
-force group = root
 load printers = no
 printing = bsd
 printcap name = /dev/null
@@ -32,6 +30,16 @@ socket options = TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192
 local master = no
 dns proxy = no
 EOT
+
+
+if [ -n "$FORCE_USER" ]; then
+echo "force user = $FORCE_USER" >> "$CONFIG_FILE"
+fi
+
+if [ -n "$FORCE_GROUP" ]; then
+echo "force group = $FORCE_GROUP" >> "$CONFIG_FILE"
+fi
+
 
   while getopts ":u:s:h" opt; do
     case $opt in
